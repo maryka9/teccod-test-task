@@ -16,10 +16,12 @@ function App() {
   };
 
   return (
-    <>
+    <div className="container">
+      <h1>Выбор услуг</h1>
+
       <ServiceList services={data} selectedServices={selectedServices} onAddService={handleAddService} />
       <Summary selectedServices={selectedServices} onRemoveService={handleRemoveService} />
-    </>
+    </div>
   )
 }
 
