@@ -23,6 +23,7 @@ html {
   line-height: 24px;
   font-family: $ff-roboto;
   color: $main-text;
+  scrollbar-gutter: stable;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -62,13 +63,12 @@ button,
 }
 
 .services-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 20px;
   min-width: 330px;
   max-width: 1300px;
 
-  @include vp-959 {
-    display: block;
+  @include desktop-width {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
   }
 }

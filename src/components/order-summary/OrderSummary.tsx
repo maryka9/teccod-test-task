@@ -30,7 +30,7 @@ function OrderSummary({ selectedServices, onRemoveService }: OrderSummaryProps) 
             <h3 className="order-summary__heading">Итого: {totalPrice}&nbsp;₽</h3>
             <div className={containerClass}>
                 <Button
-                    className="order-summary__button"
+                    className="order-summary__button order-summary__button--expand"
                     endIcon = { selectedServices.length && (expended ? <ExpandLessIcon /> : <ExpandMoreIcon />)}
                     variant="outlined"
                     onClick={() =>setExpended(!expended)}
@@ -48,7 +48,7 @@ function OrderSummary({ selectedServices, onRemoveService }: OrderSummaryProps) 
                             </li>
                         ))}
                 </ul>
-                <Button className="order-summary__button" variant="contained">Оформить заказ</Button>
+                <Button className="order-summary__button order-summary__button--order" variant="contained">Оформить заказ</Button>
             </div>
 
         </div>

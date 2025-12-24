@@ -18,6 +18,17 @@
   }
 }
 
+@mixin tablet-width {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop-width {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
 
 @mixin vp-349 {
   @media (max-width: ($vp-350 - 1px)) {
