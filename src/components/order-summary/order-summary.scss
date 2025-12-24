@@ -13,13 +13,16 @@
       grid-template-rows: min-content min-content 1fr;
     }
 
-    @include desktop-width {
-      grid-template-columns: max-content 250px;
-      grid-template-rows: min-content 0fr 1fr;
+    @include tablet-width {
+      grid-template-rows: min-content 0fr;
 
       &--opened {
-        grid-template-rows: min-content 1fr 1fr;
+        grid-template-rows: min-content 1fr;
       }
+    }
+
+    @include desktop-width {
+      grid-template-columns: max-content 250px;
     }
   }
 
