@@ -2,13 +2,13 @@ import type {Service} from "../../types";
 
 import {useState} from "react";
 
-import cn from 'classnames';
+import cn from "classnames";
 
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 
 import "./order-summary.scss";
 
@@ -19,10 +19,10 @@ type OrderSummaryProps = {
 
 function OrderSummary({ selectedServices, onRemoveService }: OrderSummaryProps) {
     const totalPrice = selectedServices.reduce((sum, service) => sum + service.price, 0);
-    const [expended, setExpended] = useState(false);
+    const [expanded, setExpanded] = useState(false);
 
     const containerClass = cn("order-summary__container", {
-        "order-summary__container--opened": expended,
+        "order-summary__container--opened": expanded,
     });
 
     return (
@@ -31,9 +31,9 @@ function OrderSummary({ selectedServices, onRemoveService }: OrderSummaryProps) 
             <div className={containerClass}>
                 <Button
                     className="order-summary__button order-summary__button--expand"
-                    endIcon = { selectedServices.length && (expended ? <ExpandLessIcon /> : <ExpandMoreIcon />)}
+                    endIcon = { selectedServices.length && (expanded ? <ExpandLessIcon /> : <ExpandMoreIcon />)}
                     variant="outlined"
-                    onClick={() =>setExpended(!expended)}
+                    onClick={() =>setExpanded(!expanded)}
                 >
                     Выбранные услуги ({selectedServices.length})
                 </Button>

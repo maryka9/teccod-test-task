@@ -2,7 +2,7 @@ import type {Service} from "../../types";
 
 import IconButton from "@mui/material/IconButton";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 import "./services-list.scss";
 
@@ -14,6 +14,7 @@ type ServiceListProps = {
 
 function ServiceList({ services, selectedServices, onAddService }: ServiceListProps) {
     const isServiceSelected = (service: Service) => selectedServices.includes(service);
+
     return (
         <ul className="services-list">
             {services.map(service => (

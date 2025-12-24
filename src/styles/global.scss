@@ -1,3 +1,5 @@
+@use "util" as *;
+
 @import "@fontsource/roboto/300.css";
 @import "@fontsource/roboto/400.css";
 @import "@fontsource/roboto/500.css";
@@ -47,11 +49,6 @@ h1, h3 {
   margin: 0;
 
   font-weight: 400;
-}
-
-a {
-  color: $color-default-black;
-  text-decoration: none;
 }
 
 button,
