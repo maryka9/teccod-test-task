@@ -1,3 +1,4 @@
+@import "@fontsource/roboto/300.css";
 @import "@fontsource/roboto/400.css";
 @import "@fontsource/roboto/500.css";
 @import "@fontsource/roboto/700.css";
@@ -41,10 +42,10 @@ main {
   flex-grow: 1;
 }
 
-h1 {
+h1, h3 {
   margin: 0;
 
-  font-weight: 500;
+  font-weight: 400;
 }
 
 a {
@@ -58,4 +59,16 @@ button,
 [type="submit"] {
   appearance: none;
   cursor: pointer;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  min-width: 330px;
+  max-width: 1300px;
+
+  @include vp-959 {
+    display: block;
+  }
 }

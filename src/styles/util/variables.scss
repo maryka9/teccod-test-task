@@ -9,11 +9,9 @@ $color-transparent: rgba(255, 255, 255, 0);
 // Project palette
 
 $main-background: rgba(169, 195, 236, 0.09);
+$secondary-background: #d1d7ed3b;
 $main-text: #212120;
-$color-border-dark: #665f55;
-$color-accent: #b0907a;
 $color-light: #c8c8c45e;
-$btn-disabled: #dfdcdc;
 
 // Typography
 
@@ -24,4 +22,5 @@ $ff-roboto: "Roboto", "Segoe UI", sans-serif;
 
 $vp-350: 350px;
 $vp-768: 768px;
+$vp-960: 960px;
 $vp-1200: 1200px;

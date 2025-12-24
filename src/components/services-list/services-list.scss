@@ -1,19 +1,26 @@
 @use "../../styles/util" as *;
 
 .services-list {
-  padding: 0;
   width: min(100vw, 600px);
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 0 10px;
+  background-color: $secondary-background;
+  border-radius: 10px;
 
   font-size: 20px;
   list-style: none;
 
-  @include vp-767 {
+
+  @include vp-959 {
     width: 100%;
+
+    font-size: 15px;
   }
 
   &__item {
     display: grid;
-    grid-template-columns: 1fr min-content;
+    grid-template-columns: 1fr min-content min-content;
     align-items: center;
     column-gap: 16px;
     padding: 20px 0;
