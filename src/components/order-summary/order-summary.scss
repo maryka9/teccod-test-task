@@ -15,14 +15,11 @@
 
     @include tablet-width {
       grid-template-rows: min-content 0fr;
+      grid-template-columns: 1fr max-content;
 
       &--opened {
         grid-template-rows: min-content 1fr;
       }
-    }
-
-    @include desktop-width {
-      grid-template-columns: max-content 250px;
     }
   }
 
