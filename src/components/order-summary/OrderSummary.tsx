@@ -18,8 +18,9 @@ type OrderSummaryProps = {
 }
 
 function OrderSummary({ selectedServices, onRemoveService }: OrderSummaryProps) {
-    const totalPrice = selectedServices.reduce((sum, service) => sum + service.price, 0);
     const [expanded, setExpanded] = useState(false);
+    const totalPrice = selectedServices.reduce((sum, service) => sum + service.price, 0);
+    const isCartEmpty = !selectedServices.length
 
     const containerClass = cn("order-summary__container", {
         "order-summary__container--opened": expanded,
@@ -48,7 +49,7 @@ function OrderSummary({ selectedServices, onRemoveService }: OrderSummaryProps) 
                             </li>
                         ))}
                 </ul>
-                <Button className="order-summary__button order-summary__button--order" variant="contained">Оформить заказ</Button>
+                <Button className="order-summary__button order-summary__button--order" variant="contained" disabled={isCartEmpty}>Оформить заказ</Button>
             </div>
 
         </div>
