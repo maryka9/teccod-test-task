@@ -14,6 +14,7 @@
     }
 
     @include desktop-width {
+      grid-template-columns: max-content 250px;
       grid-template-rows: min-content 0fr 1fr;
 
       &--opened {
@@ -40,7 +41,6 @@
 
     @include tablet-width {
       grid-column: auto;
-      width: 230px;
 
       &--expand,
       &--order {
